@@ -2,12 +2,6 @@
 Capstone team FALL2024
 
 Team Members
-1. Akshaya Kumar Puvvada
-2. Shiva Krishna Nangunuri
-3. Monika Bondala
-
-Email IDs
-puvvadaa0348@uhcl.edu
-nangunuriS1516@uhcl.edu
-bondalam0349@uhcl.edu
-
+1. Akshaya Kumar Puvvada (puvvadaa0348@uhcl.edu)
+2. Shiva Krishna Nangunuri (nangunuriS1516@uhcl.edu)
+3. Monika Bondala (bondalam0349@uhcl.edu)
