@@ -5,9 +5,9 @@ Capstone team FALL2024
 
 | Collabortor name        | Email                   | Github username |
 | ----------------------- | ----------------------- | --------------- |
-| Akshaya Kumar Puvvada   | puvvadaa0348@uhcl.edu   |                 |
-| Shiva Krishna Nangunuri | nangunuriS1516@uhcl.edu |                 |
-| Monika Bondala          | bondalam0349@uhcl.edu   |                 |
+| Akshaya Kumar Puvvada   | puvvadaa0348@uhcl.edu   | akkpuvvada      |
+| Shiva Krishna Nangunuri | nangunuriS1516@uhcl.edu | shiva-4         |
+| Monika Bondala          | bondalam0349@uhcl.edu   | monikaab        |
 
 ## Website
 
@@ -18,3 +18,16 @@ https://akkpuvvada.github.io/CAPProject/
 1. Identifying way to creating shared space experience.
 2. Creating viewable experience from any angle in the shared space.
 3. Plotting Anchor points and angle.
+
+## Hardware requirements
+
+1. Macbook / Mac mini
+2. atleast 2 AVPs
+
+## Tools / Software toolkits required
+
+1. Unity
+2. SwiftUI
+3. Reality Kit 
+4. AR Kit
+5. Reality Composer Pro (for 3D Content)
