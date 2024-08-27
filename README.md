@@ -31,3 +31,10 @@ https://akkpuvvada.github.io/CAPProject/
 3. Reality Kit 
 4. AR Kit
 5. Reality Composer Pro (for 3D Content)
+
+### Milestone Information
+
+1. Project setup and documentation
+2. AVP sample game
+3. Synchronization with anchors
+4. Singleton application to work for multiple AVPs
