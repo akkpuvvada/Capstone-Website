@@ -38,3 +38,6 @@ https://akkpuvvada.github.io/CAPProject/
 2. AVP sample game
 3. Synchronization with anchors
 4. Singleton application to work for multiple AVPs
+
+### SASS to CSS
+sass --watch .\main.sass main.css
