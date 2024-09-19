@@ -2,340 +2,544 @@
 <html lang="en">
 
 <head>
-  <title>Strategic Tech</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="HTML5 website template">
-  <meta name="keywords" content="Strategic Tech, template, html, sass, jquery">
-  <meta name="author" content="Bucky Maler">
-  <link rel="stylesheet" href="assets/css/main.css">
-</head>
+    <title>Strategic Tech</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="HTML5 website template">
+    <meta name="keywords" content="Strategic Tech, template, html, sass, jquery">
+    <meta name="author" content="Bucky Maler">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        /* General Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        h2, h4 {
+            text-align: center;
+        }
+
+        /* Accordion Styles */
+        .accordion {
+            background-color: #333;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid #444;
+        }
+
+        .accordion-header {
+            background-color: #222;
+            padding: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .accordion-body {
+            padding: 15px;
+            background-color:#444;
+            display: none;
+            color: #ccc;
+        }
+
+            .accordion-body.show {
+                display: block;
+            }
+
+        /* Major Milestones */
+        .milestones {
+            list-style: none;
+            padding: 0;
+            text-align: center;
+        }
+
+            .milestones li {
+                margin: 10px 0;
+            }
+
+            .milestones i {
+                color: #00ff00;
+                margin-right: 10px;
+            }
+
+        /* Contact Section Styles */
+        .contact-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-heading {
+            margin-bottom: 20px;
+        }
+
+        .column {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .left-column, .right-column {
+            width: 50%;
+            max-width: 600px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .row {
+                flex-direction: column;
+            }
+
+            .left-column, .right-column {
+                width: 100%;
+            }
+        }
+    </style></head>
 
 <body>
 
-  <!-- notification for small viewports and landscape oriented smartphones -->
-  <div class="device-notification">
-    <a class="device-notification--logo" href="#0">
-      <img src="assets/img/logo.png" alt="Strategic Tech">
-      <p>Strategic Tech</p>
-    </a>
-    <p class="device-notification--message">Strategic Tech has so much to offer that we must request you orient your device to
-      portrait or find a larger screen. You won't be disappointed.</p>
-  </div>
+    <!-- notification for small viewports and landscape oriented smartphones -->
+    <div class="device-notification">
+        <a class="device-notification--logo" href="#0">
+            <img src="assets/img/logo.png" alt="Strategic Tech">
+            <p>Strategic Tech</p>
+        </a>
+        <p class="device-notification--message">
+            Strategic Tech has so much to offer that we must request you orient your device to
+            portrait or find a larger screen. You won't be disappointed.
+        </p>
+    </div>
 
-  <div class="perspective effect-rotate-left">
-    <div class="container">
-      <div class="outer-nav--return"></div>
-      <div id="viewport" class="l-viewport">
-        <div class="l-wrapper">
-          <header class="header">
-            <a class="header--logo" href="#0">
-              <img src="assets/img/logo.png" alt="Strategic Tech">
-              <p>Strategic Tech</p>
-            </a>
-            <button class="header--cta cta">Contact us</button>
-            <div class="header--nav-toggle">
-              <span></span>
+    <div class="perspective effect-rotate-left">
+        <div class="container">
+            <div class="outer-nav--return"></div>
+            <div id="viewport" class="l-viewport">
+                <div class="l-wrapper">
+                    <header class="header">
+                        <a class="header--logo" href="#0">
+                            <img src="assets/img/logo.png" alt="Strategic Tech">
+                            <p>Strategic Tech</p>
+                        </a>
+                        <button class="header--cta cta">Contact us</button>
+                        <div class="header--nav-toggle">
+                            <span></span>
+                        </div>
+                    </header>
+                    <nav class="l-side-nav">
+                        <ul class="side-nav">
+                            <li class="is-active"><span>Home</span></li>
+                            <li><span>Team</span></li>
+                            <li><span>Mentors</span></li>
+                            <li><span>Milestones</span></li>
+                            <li><span>Meeting</span></li>
+                            <li><span>Contact us</span></li>
+                        </ul>
+                    </nav>
+                    <ul class="l-main-content main-content">
+                        <li class="l-section section section--is-active">
+                            <div class="intro">
+                                <div class="intro--banner">
+                                    <h1>Engage MR</h1>
+                                    <h2>To Increase Engagement<br>in children with Autism</h2>
+                                    <button class="cta">
+                                        Contact us
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118"
+                                             style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                                        <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                                        <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />
+                      </g>
+                    </svg>
+                                        <span class="btn-background"></span>
+                                    </button>
+                                    <img src="assets/img/sensors2.png" alt="Welcome">
+                                </div>
+                                <div class="intro--options">
+                                    <a href="#0">
+                                        <h3>Metiew &amp; Smith</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
+                                    </a>
+                                    <a href="#0">
+                                        <h3>Fantasy interactive</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
+                                    </a>
+                                    <a href="#0">
+                                        <h3>Paul &amp; shark</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="l-section section">
+                            <div class="work">
+                                <h2>Team Members</h2>
+                                <div class="work--lockup">
+                                    <ul class="slider">
+                                        <li class="slider--item slider--item-left">
+                                            <a href="#0">
+                                                <div class="slider--item-image">
+                                                    <img src="static/img/shiva.png" alt="Shiva Krishna Nangunuri">
+                                                </div>
+                                                <p class="slider--item-title">Shiva Krishna Nangunuri</p>
+                                                <p class="slider--item-description">
+                                                    Role: System Analyst<br>
+                                                    E: nangunuris1516@uhcl.edu<br>
+                                                    P: (713)-320-4721<br>
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li class="slider--item slider--item-center">
+                                            <a href="#0">
+                                                <div class="slider--item-image">
+                                                    <img src="static/img/akshay.png" alt="Metiew and Smith">
+                                                </div>
+                                                <p class="slider--item-title">Akshaya Kumar Puvvada</p>
+                                                <p class="slider--item-description">
+                                                    Role: Tech Lead<br>
+                                                    E: puvvadaa0348@uhcl.edu<br>
+                                                    P: (917)-806-7354<br>
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li class="slider--item slider--item-right">
+                                            <a href="#0">
+                                                <div class="slider--item-image">
+                                                    <img src="static/img/monika.png" alt="Alex Nowak">
+                                                </div>
+                                                <p class="slider--item-title">Monika Bondala</p>
+                                                <p class="slider--item-description">
+                                                    Role: Systems Architect<br>
+                                                    E: bondalam0349@uhcl.edu<br>
+                                                    P: (732)-983-8730<br>
+                                                </p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="slider--prev">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118"
+                                             style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                                        <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                                        <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
+                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
+                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z" />
+                      </g>
+                    </svg>
+                                    </div>
+                                    <div class="slider--next">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118"
+                                             style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                                        <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                                        <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />
+                      </g>
+                    </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="l-section section">
+                            <div class="work">
+                                <h2>Mentors & Instructor</h2>
+                                <div class="work--lockup">
+                                    <ul class="slider">
+                                        <li class="slider--item slider--item-left">
+                                            <a href="#0">
+                                                <div class="slider--item-image">
+                                                    <img src="static/img/shiva.png" alt="Dr. Ross Niswanger">
+                                                </div>
+                                                <p class="slider--item-title">Dr. Ross Niswanger</p>
+                                                <p class="slider--item-description">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit sed
+                                                    do.
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li class="slider--item slider--item-center">
+                                            <a href="#0">
+                                                <div class="slider--item-image">
+                                                    <img src="static/img/akshay.png" alt="Dr. Saiyed Bettayeb">
+                                                </div>
+                                                <p class="slider--item-title">Dr. Saiyed Bettayeb</p>
+                                                <p class="slider--item-description">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit sed
+                                                    do.
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li class="slider--item slider--item-right">
+                                            <a href="#0">
+                                                <div class="slider--item-image">
+                                                    <img src="static/img/monika.png" alt="Dr. Dorothea Lerman">
+                                                </div>
+                                                <p class="slider--item-title">Dr. Dorothea Lerman</p>
+                                                <p class="slider--item-description">
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit sed
+                                                    do.
+                                                </p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="slider--prev">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118"
+                                             style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                                        <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                                        <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
+                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
+                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z" />
+                      </g>
+                    </svg>
+                                    </div>
+                                    <div class="slider--next">
+                                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118"
+                                             style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                                        <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                                        <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />
+                      </g>
+                    </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="l-section section">
+                            <div class="contact">
+                                <div class="contact--lockup">
+                                    <div class="modal">
+                                        <div class="modal--information">
+                                            <p>Pawia 5, 31-154 Kraków, Poland</p>
+                                            <a href="mailto:ouremail@gmail.com">ouremail@gmail.com</a>
+                                            <a href="tel:+148126287560">+48 12 628 75 60</a>
+                                        </div>
+                                        <ul class="modal--options">
+                                            <li><a href="#0">Bēhance</a></li>
+                                            <li><a href="#0">dribbble</a></li>
+                                            <li><a href="mailto:ouremail@gmail.com">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="l-section section">
+                            <div class="hire">
+                                <h2>You want us to do</h2>
+                                <!-- checkout formspree.io for easy form setup -->
+                                <form class="work-request">
+                                    <div class="work-request--options">
+                                        <span class="options-a">
+                                            <input id="opt-1" type="checkbox" value="app design">
+                                            <label for="opt-1">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
+                                                     style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                          </g>
+                        </svg>
+                                                App Design
+                                            </label>
+                                            <input id="opt-2" type="checkbox" value="graphic design">
+                                            <label for="opt-2">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
+                                                     style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                          </g>
+                        </svg>
+                                                Graphic Design
+                                            </label>
+                                            <input id="opt-3" type="checkbox" value="motion design">
+                                            <label for="opt-3">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
+                                                     style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                          </g>
+                        </svg>
+                                                Motion Design
+                                            </label>
+                                        </span>
+                                        <span class="options-b">
+                                            <input id="opt-4" type="checkbox" value="ux design">
+                                            <label for="opt-4">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
+                                                     style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                          </g>
+                        </svg>
+                                                UX Design
+                                            </label>
+                                            <input id="opt-5" type="checkbox" value="webdesign">
+                                            <label for="opt-5">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
+                                                     style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                          </g>
+                        </svg>
+                                                Webdesign
+                                            </label>
+                                            <input id="opt-6" type="checkbox" value="marketing">
+                                            <label for="opt-6">
+                                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
+                                                     style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                                                <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                                                <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
+                          </g>
+                        </svg>
+                                                Marketing
+                                            </label>
+                                        </span>
+                                    </div>
+                                    <div class="work-request--information">
+                                        <div class="information-name">
+                                            <input id="name" type="text" spellcheck="false">
+                                            <label for="name">Name</label>
+                                        </div>
+                                        <div class="information-email">
+                                            <input id="email" type="email" spellcheck="false">
+                                            <label for="email">Email</label>
+                                        </div>
+                                    </div>
+                                    <input type="submit" value="Send Request">
+                                </form>
+                            </div>
+                        </li>
+
+                        <li class="l-section section">
+
+                            div class="container">
+                            <div class="contact-section">
+                                <div class="row">
+                                    <!-- Left Column: Accordion for Weekly Milestones -->
+                                    <div class="left-column">
+                                        <h4>Weekly Milestones</h4>
+                                        <div class="accordion">
+
+
+                                            <div class="accordion-item">
+                                                <div class="accordion-header" onclick="toggleAccordion(1)">Week 1</div>
+                                                <div class="accordion-body" id="accordionBody1">
+                                                    <strong>Milestone 1:</strong> Completed basic project setup and research.
+                                                </div>
+                                            </div>
+
+
+                                            <div class="accordion-item">
+                                                <div class="accordion-header" onclick="toggleAccordion(2)">Week 2</div>
+                                                <div class="accordion-body" id="accordionBody2">
+                                                    <strong>Milestone 2:</strong> Integrated API and handled database setup.
+                                                </div>
+                                            </div>
+
+
+                                            <div class="accordion-item">
+                                                <div class="accordion-header" onclick="toggleAccordion(3)">Week 3</div>
+                                                <div class="accordion-body" id="accordionBody3">
+                                                    <strong>Milestone 3:</strong> Completed the user authentication system.
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item">
+                                                <div class="accordion-header" onclick="toggleAccordion(4)">Week 4</div>
+                                                <div class="accordion-body" id="accordionBody4">
+                                                    <strong>Milestone 4:</strong> Completed the user authentication system.
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item">
+                                                <div class="accordion-header" onclick="toggleAccordion(5)">Week 5 </div>
+                                                <div class="accordion-body" id="accordionBody5">
+                                                    <strong>Milestone 5:</strong> Completed the user authentication system.
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <!-- Right Column: Major Milestones -->
+                                    <div class="right-column">
+                                        <h4>Major Milestones</h4>
+                                        <ul class="milestones">
+                                            <li><i class="fa fa-check-circle"></i> Project setup and documentation </li>
+                                            <li><i class="fa fa-check-circle"></i> AVP sample game</li>
+                                            <li><i class="fa fa-check-circle"></i>Synchronization with anchors</li>
+                                            <li><i class="fa fa-check-circle"></i> Singleton application to work for multiple AVPs</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+
+
+
+
+                </li>
+
+                </ul>
             </div>
-          </header>
-          <nav class="l-side-nav">
-            <ul class="side-nav">
-              <li class="is-active"><span>Home</span></li>
-              <li><span>Team</span></li>
-              <li><span>Mentors</span></li>
-              <li><span>Milestones</span></li>
-              <li><span>Meeting</span></li>
-              <li><span>Contact us</span></li>
-            </ul>
-          </nav>
-          <ul class="l-main-content main-content">
-            <li class="l-section section section--is-active">
-              <div class="intro">
-                <div class="intro--banner">
-                  <h1>Engage MR</h1>
-                  <h2>To Increase Engagement<br>in children with Autism</h2>
-                  <button class="cta">Contact us
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118"
-                      style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                      <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                        <path
-                          d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />
-                      </g>
-                    </svg>
-                    <span class="btn-background"></span>
-                  </button>
-                  <img src="assets/img/sensors2.png" alt="Welcome">
-                </div>
-                <div class="intro--options">
-                  <a href="#0">
-                    <h3>Metiew &amp; Smith</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
-                  </a>
-                  <a href="#0">
-                    <h3>Fantasy interactive</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
-                  </a>
-                  <a href="#0">
-                    <h3>Paul &amp; shark</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do.</p>
-                  </a>
-                </div>
-              </div>
-            </li>
-            <li class="l-section section">
-              <div class="work">
-                <h2>Team Members</h2>
-                <div class="work--lockup">
-                  <ul class="slider">
-                    <li class="slider--item slider--item-left">
-                      <a href="#0">
-                        <div class="slider--item-image">
-                          <img src="static/img/shiva.png" alt="Shiva Krishna Nangunuri">
-                        </div>
-                        <p class="slider--item-title">Shiva Krishna Nangunuri</p>
-                        <p class="slider--item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed
-                          do.</p>
-                      </a>
-                    </li>
-                    <li class="slider--item slider--item-center">
-                      <a href="#0">
-                        <div class="slider--item-image">
-                          <img src="static/img/akshay.png" alt="Metiew and Smith">
-                        </div>
-                        <p class="slider--item-title">Akshaya Kumar Puvvada</p>
-                        <p class="slider--item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed
-                          do.</p>
-                      </a>
-                    </li>
-                    <li class="slider--item slider--item-right">
-                      <a href="#0">
-                        <div class="slider--item-image">
-                          <img src="static/img/monika.png" alt="Alex Nowak">
-                        </div>
-                        <p class="slider--item-title">Monika Bondala</p>
-                        <p class="slider--item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed
-                          do.</p>
-                      </a>
-                    </li>
-                  </ul>
-                  <div class="slider--prev">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118"
-                      style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                      <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                        <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
-                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
-                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z" />
-                      </g>
-                    </svg>
-                  </div>
-                  <div class="slider--next">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118"
-                      style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                      <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                        <path
-                          d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="l-section section">
-              <div class="work">
-                <h2>Mentors & Instructor</h2>
-                <div class="work--lockup">
-                  <ul class="slider">
-                    <li class="slider--item slider--item-left">
-                      <a href="#0">
-                        <div class="slider--item-image">
-                          <img src="static/img/shiva.png" alt="Dr. Ross Niswanger">
-                        </div>
-                        <p class="slider--item-title">Dr. Ross Niswanger</p>
-                        <p class="slider--item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed
-                          do.</p>
-                      </a>
-                    </li>
-                    <li class="slider--item slider--item-center">
-                      <a href="#0">
-                        <div class="slider--item-image">
-                          <img src="static/img/akshay.png" alt="Dr. Saiyed Bettayeb">
-                        </div>
-                        <p class="slider--item-title">Dr. Saiyed Bettayeb</p>
-                        <p class="slider--item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed
-                          do.</p>
-                      </a>
-                    </li>
-                    <li class="slider--item slider--item-right">
-                      <a href="#0">
-                        <div class="slider--item-image">
-                          <img src="static/img/monika.png" alt="Dr. Dorothea Lerman">
-                        </div>
-                        <p class="slider--item-title">Dr. Dorothea Lerman</p>
-                        <p class="slider--item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed
-                          do.</p>
-                      </a>
-                    </li>
-                  </ul>
-                  <div class="slider--prev">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118"
-                      style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                      <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                        <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
-                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
-                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z" />
-                      </g>
-                    </svg>
-                  </div>
-                  <div class="slider--next">
-                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118"
-                      style="enable-background:new 0 0 150 118;" xml:space="preserve">
-                      <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
-                        <path
-                          d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z" />
-                      </g>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="l-section section">
-              <div class="contact">
-                <div class="contact--lockup">
-                  <div class="modal">
-                    <div class="modal--information">
-                      <p>Pawia 5, 31-154 Kraków, Poland</p>
-                      <a href="mailto:ouremail@gmail.com">ouremail@gmail.com</a>
-                      <a href="tel:+148126287560">+48 12 628 75 60</a>
-                    </div>
-                    <ul class="modal--options">
-                      <li><a href="#0">Bēhance</a></li>
-                      <li><a href="#0">dribbble</a></li>
-                      <li><a href="mailto:ouremail@gmail.com">Contact Us</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="l-section section">
-              <div class="hire">
-                <h2>You want us to do</h2>
-                <!-- checkout formspree.io for easy form setup -->
-                <form class="work-request">
-                  <div class="work-request--options">
-                    <span class="options-a">
-                      <input id="opt-1" type="checkbox" value="app design">
-                      <label for="opt-1">
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
-                          style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                          <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                            <path
-                              d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
-                          </g>
-                        </svg>
-                        App Design
-                      </label>
-                      <input id="opt-2" type="checkbox" value="graphic design">
-                      <label for="opt-2">
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
-                          style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                          <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                            <path
-                              d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
-                          </g>
-                        </svg>
-                        Graphic Design
-                      </label>
-                      <input id="opt-3" type="checkbox" value="motion design">
-                      <label for="opt-3">
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
-                          style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                          <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                            <path
-                              d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
-                          </g>
-                        </svg>
-                        Motion Design
-                      </label>
-                    </span>
-                    <span class="options-b">
-                      <input id="opt-4" type="checkbox" value="ux design">
-                      <label for="opt-4">
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
-                          style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                          <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                            <path
-                              d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
-                          </g>
-                        </svg>
-                        UX Design
-                      </label>
-                      <input id="opt-5" type="checkbox" value="webdesign">
-                      <label for="opt-5">
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
-                          style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                          <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                            <path
-                              d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
-                          </g>
-                        </svg>
-                        Webdesign
-                      </label>
-                      <input id="opt-6" type="checkbox" value="marketing">
-                      <label for="opt-6">
-                        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
-                          style="enable-background:new 0 0 150 111;" xml:space="preserve">
-                          <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
-                            <path
-                              d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z" />
-                          </g>
-                        </svg>
-                        Marketing
-                      </label>
-                    </span>
-                  </div>
-                  <div class="work-request--information">
-                    <div class="information-name">
-                      <input id="name" type="text" spellcheck="false">
-                      <label for="name">Name</label>
-                    </div>
-                    <div class="information-email">
-                      <input id="email" type="email" spellcheck="false">
-                      <label for="email">Email</label>
-                    </div>
-                  </div>
-                  <input type="submit" value="Send Request">
-                </form>
-              </div>
-            </li>
-          </ul>
         </div>
-      </div>
     </div>
     <ul class="outer-nav">
-      <li>Home</li>
-      <li>Team</li>
-      <li>Mentors</li>
-      <li>Milestones</li>
-      <li>Meeting Information</li>
-      <li>Contact us</li>
+        <li>Home</li>
+        <li>Team</li>
+        <li>Mentors</li>
+        <li>Milestones</li>
+        <li>Meeting Information</li>
+        <li>Contact us</li>
     </ul>
-  </div>
+    </div>
+    <script>function toggleAccordion(accordionIndex) {
+        const accordionBody = document.getElementById('accordionBody' + accordionIndex);
+        const allAccordionBodies = document.querySelectorAll('.accordion-body');
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
-  <script src="assets/js/functions-min.js"></script>
+        allAccordionBodies.forEach(body => {
+            if (body !== accordionBody) {
+                body.classList.remove('show');
+            }
+        });
+
+        accordionBody.classList.toggle('show');
+    }</script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+    <script src="assets/js/functions-min.js"></script>
 </body>
 
 </html>
