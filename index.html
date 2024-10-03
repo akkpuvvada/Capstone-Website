@@ -43,15 +43,19 @@
 
         /* Accordion Styles */
         .accordion {
+            /* Adjust this value for more spacing */
+            margin-top: 20%;
             background-color: #333;
-            border-radius: 5px;
+            border-radius: 50px;
             width: 100%;
             max-width: 600px;
             margin: auto;
         }
 
         .accordion-item {
+          
             border-bottom: 1px solid #444;
+            margin: auto;
         }
 
         .accordion-header {
@@ -110,7 +114,9 @@
 
         .left-column, .right-column {
             width: 50%;
-            max-width: 600px;
+            margin-top: 10%;
+            margin-left: 14%;
+            max-width: 700px;
         }
 
         /* Responsive Design */
@@ -149,7 +155,7 @@
                             <img src="assets/img/logo.png" alt="Strategic Tech">
                             <p>Strategic Tech</p>
                         </a>
-                        <button class="header--cta cta">Technical Documentation</button>
+                        <button class="header--cta cta">Milestones</button>
                         <div class="header--nav-toggle">
                             <span></span>
                         </div>
@@ -159,9 +165,10 @@
                             <li class="is-active"><span>Home</span></li>
                             <li><span>Team</span></li>
                             <li><span>Mentors</span></li>
-                            <li><span>Milestones</span></li>
                             <li><span>Technical Documentation</span></li>
-                         
+                            <li><span>Milestones</span></li>
+
+
                         </ul>
                     </nav>
                     <ul class="l-main-content main-content">
@@ -171,7 +178,7 @@
                                     <h1>Engage MR</h1>
                                     <h2>To Increase Engagement<br>in children with Autism</h2>
                                     <button class="cta">
-                                        Technical Documentation
+                                        Milestones
                                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                                              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118"
                                              style="enable-background:new 0 0 150 118;" xml:space="preserve">
@@ -344,7 +351,7 @@
                                 <form class="work-request">
                                     <div class="work-request--options">
                                         <span class="options-a">
-                                            <input id="opt-1" type="checkbox" value="app design" onclick="openDocument('https://drive.google.com/file/d/1Jau-JFBlL8IB7MzUKNPa-BLMvzsPXxvK/view?usp=sharing')">
+                                            <input id="opt-1" type="checkbox" value="app design" onclick="openDocument('https://drive.google.com/file/d/11STdYE5uSWQmL1hR5toyKbF2EzEn4OxJ/view?usp=sharing')">
                                             <label for="opt-1">
                                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                                                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
@@ -356,7 +363,7 @@
                                                Abstract
                                             </label>
 
-                                            <input id="opt-2" type="checkbox" value="graphic design" onclick="openDocument(https://drive.google.com/file/d/1Jau-JFBlL8IB7MzUKNPa-BLMvzsPXxvK/view?usp=sharing')">
+                                            <input id="opt-2" type="checkbox" value="graphic design" onclick="openDocument()">
                                             <label for="opt-2">
                                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                                                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 111"
@@ -431,11 +438,11 @@
 
                         <li class="l-section section">
 
-                            div class="container">
+                           
                             <div class="contact-section">
                                 <div class="row">
                                     <!-- Left Column: Accordion for Weekly Milestones -->
-                                    <div class="left-column">
+                                    <div class="left-column ">
                                         <h4>Weekly Milestones</h4>
                                         <div class="accordion">
 
@@ -443,7 +450,12 @@
                                             <div class="accordion-item">
                                                 <div class="accordion-header" onclick="toggleAccordion(1)">Week 1</div>
                                                 <div class="accordion-body" id="accordionBody1">
-                                                    <strong>Milestone 1:</strong> Completed basic project setup and research.
+                                                    <strong>Milestone 1:</strong> <br>
+                                                    Completed basic project research.<br>
+                                                    Intial meet with professor ross<br >
+                                                    Brainstorming about the project scope and motivation<br >
+                                                    Brief understanding about the project outcome<br >
+                                                    Discussion about the multiplayer application using Apple vision Pro
                                                 </div>
                                             </div>
 
@@ -451,7 +463,11 @@
                                             <div class="accordion-item">
                                                 <div class="accordion-header" onclick="toggleAccordion(2)">Week 2</div>
                                                 <div class="accordion-body" id="accordionBody2">
-                                                    <strong>Milestone 2:</strong> Integrated API and handled database setup.
+                                                    <strong>Milestone 2:</strong> <br>
+                                                    Scheduled meet with mentor<br>
+                                                    Team would meet on teams for project discussion<br>
+                                                    Github repository and portfolio setup<br>
+                                                    Tasks to be identified on Github project space<br>
                                                 </div>
                                             </div>
 
@@ -459,21 +475,28 @@
                                             <div class="accordion-item">
                                                 <div class="accordion-header" onclick="toggleAccordion(3)">Week 3</div>
                                                 <div class="accordion-body" id="accordionBody3">
-                                                    <strong>Milestone 3:</strong> Completed the user authentication system.
+                                                    <strong>Milestone 3:</strong><br>
+                                                    Finalized requirements and set project milestones.<br>
+                                                    Delivery of Abstract Report<br>
+                                                    Initialization and ProjectSetup
                                                 </div>
                                             </div>
 
                                             <div class="accordion-item">
-                                                <div class="accordion-header" onclick="toggleAccordion(4)">Week 4</div>
+                                                <div class="accordion-header" onclick="toggleAccordion(4)">Week 4-6</div>
                                                 <div class="accordion-body" id="accordionBody4">
-                                                    <strong>Milestone 4:</strong> Completed the user authentication system.
+                                                    <strong>Milestone 4-6:</strong> <br>
+                                                    Creating the Hello world Application<br>
+                                                    Working on the dependiencies and the Packages <strong>Eg:ARKKit ,RealityKit</strong><br>
+                                                    Creating the simulation packages for the project modules<br>
+                                                    Testing the simuation modules and Environment<br>
                                                 </div>
                                             </div>
 
                                             <div class="accordion-item">
                                                 <div class="accordion-header" onclick="toggleAccordion(5)">Week 5 </div>
                                                 <div class="accordion-body" id="accordionBody5">
-                                                    <strong>Milestone 5:</strong> Completed the user authentication system.
+                                                    <strong>Milestone 7:</strong> Mid Term Presentation.
                                                 </div>
                                             </div>
 
@@ -507,10 +530,9 @@
         <li>Home</li>
         <li>Team</li>
         <li>Mentors</li>
+        <li>Technical Documentation</li>
         <li>Milestones</li>
-        <li>Meeting Information</li>
-        <li>Contact us</li>
-    </ul>
+        
     </div>
     <script>
 function toggleAccordion(accordionIndex) {
